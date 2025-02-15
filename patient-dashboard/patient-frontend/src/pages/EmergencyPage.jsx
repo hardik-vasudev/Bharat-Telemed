@@ -7,7 +7,7 @@ const EmergencyPage = () => {
   const navigate = useNavigate();
   const [selectedIssue, setSelectedIssue] = useState(null);
   const [age, setAge] = useState("");
-
+// List of predefined emergency issues
   const emergencyIssues = [
     "Heart Attack Symptoms",
     "Severe Injury",
@@ -15,7 +15,7 @@ const EmergencyPage = () => {
     "Unconsciousness",
     "High Fever & Seizures",
   ];
-
+// Proceed to next step if both an issue and age are selected
   const handleProceed = () => {
     if (selectedIssue && age) {
       navigate("/WaitingScreen"); // ✅ FIX: Redirect properly to WaitingScreen
