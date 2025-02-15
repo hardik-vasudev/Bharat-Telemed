@@ -2,6 +2,7 @@ import React from "react";
 import { FaUserMd } from "react-icons/fa"; // Ensure react-icons is installed
 import logo from "../assets/logo.png";
 
+
 const TopBar = () => {
   return (
     <div className="w-full bg-green-50 shadow-md border-b border-green-200">
