@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import { useState } from "react";
+
 
 const JivanAISymptomForm = ({ onPredict }) => {
   // State to store form data
