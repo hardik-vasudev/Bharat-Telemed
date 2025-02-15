@@ -2,17 +2,23 @@ import React, { useRef, useState } from "react";
 import { JaaSMeeting } from "@jitsi/react-sdk";
 import { MessageSquare, MessageSquareOff } from "lucide-react";
 
+import { useRef, useState } from "react";
+import { JaaSMeeting } from "@jitsi/react-sdk";
+import { MessageSquare, MessageSquareOff } from "lucide-react";
+
 const DoctorJitsiMeet = ({ jwt, doctorName }) => {
   const jitsiApiRef = useRef(null);
   const [chatVisible, setChatVisible] = useState(false);
 
+  // Function to toggle chat visibility within Jitsi Meet
   const toggleChat = () => {
     if (jitsiApiRef.current) {
-      jitsiApiRef.current.executeCommand("toggleChat");
+      jitsiApiRef.current.executeCommand("toggleChat"); // Execute Jitsi command
       setChatVisible(!chatVisible);
     }
   };
 
+  // Display a loading message if JWT is not available
   if (!jwt) {
     return (
       <div className="flex items-center justify-center h-screen bg-gray-100">
@@ -23,11 +29,12 @@ const DoctorJitsiMeet = ({ jwt, doctorName }) => {
 
   return (
     <div className="relative w-full h-full flex items-center justify-center">
+      {/* Jitsi Meet Integration */}
       <JaaSMeeting
-        appId="vpaas-magic-cookie-c85c2e0743c543eca03932757a05a554"
-        domain="8x8.vc"
-        roomName="TelemedRoom" // Fixed room name handled internally by Jitsi
-        jwt={jwt}
+        appId="vpaas-magic-cookie-c85c2e0743c543eca03932757a05a554" // Jitsi-as-a-Service App ID
+        domain="8x8.vc" // Jitsi domain
+        roomName="TelemedRoom" // Fixed room name for teleconsultation
+        jwt={jwt} // JWT authentication for secure access
         configOverwrite={{
           startWithAudioMuted: false,
           startWithVideoMuted: false,
@@ -41,17 +48,17 @@ const DoctorJitsiMeet = ({ jwt, doctorName }) => {
           disableSelfView: false,
         }}
         interfaceConfigOverwrite={{
-          TOOLBAR_BUTTONS: ["microphone", "camera", "tileview", "hangup"],
+          TOOLBAR_BUTTONS: ["microphone", "camera", "tileview", "hangup"], // Minimal toolbar
           MOBILE_APP_PROMO: false,
           VIDEO_LAYOUT_FIT: "both",
         }}
         userInfo={{
-          displayName: doctorName || "Doctor",
+          displayName: doctorName || "Doctor", // Display name in the meeting
         }}
         onApiReady={(externalApi) => {
           jitsiApiRef.current = externalApi;
           externalApi.addEventListener("videoConferenceLeft", () => {
-            // Optionally, navigate away when the meeting is left.
+            // Optionally, handle actions when the user leaves the meeting.
           });
         }}
         getIFrameRef={(iframeRef) => {
@@ -60,6 +67,8 @@ const DoctorJitsiMeet = ({ jwt, doctorName }) => {
           iframeRef.style.border = "none";
         }}
       />
+
+      {/* Chat Toggle Button */}
       <button
         className="absolute bottom-6 right-6 bg-blue-600 text-white px-5 py-3 rounded-xl shadow-lg flex items-center gap-2 hover:bg-blue-700 transition"
         onClick={toggleChat}
@@ -72,3 +81,4 @@ const DoctorJitsiMeet = ({ jwt, doctorName }) => {
 };
 
 export default DoctorJitsiMeet;
+
