@@ -1,4 +1,4 @@
-// src/components/SensorDataDisplay.jsx
+
 import React from "react";
 
 const SensorDataDisplay = ({ sensorData }) => {
