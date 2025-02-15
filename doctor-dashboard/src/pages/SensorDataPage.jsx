@@ -1,4 +1,4 @@
-// src/pages/SensorDataPage.jsx
+
 import React from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import {
