@@ -9,6 +9,7 @@ const styles = StyleSheet.create({
   medicineContainer: { marginTop: 10, borderTop: "1px solid #000", paddingTop: 5 },
 });
 
+
 const PrescriptionPDF = () => {
   const location = useLocation();
   const { selectedMedicines, customInstructions, followUpDate } = location.state || {};
