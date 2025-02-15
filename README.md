@@ -1,5 +1,11 @@
 # Bharat TeleMed
-Bharat TeleMed is a Health Kiosk which enables patients to connect to any doctor in any part of the world remotely,recieve diagnosis in their own language.
+Bharat-TeleMed is a portable, AI-assisted telemedicine kiosk designed to serve rural populations with remote medical consultations, provide diagnoses, and issue prescriptions 24/7 for more than 60 diseases. Bharat-TeleMed OS features a voice-enabled UI in 20+ Indian regional languages, assisting patients in receiving diagnoses in their native languages.
+
+JivanAI, a conversational AI doctor, can address most medical queries, including scheduling teleconsultations, providing ML-based early disease predictions, offering personalized recovery plans, and explaining prescriptions in multiple Indian languages.
+
+The vision behind Bharat-TeleMed is to provide the best healthcare to every Indian. Our kiosk is not only AI-enabled, smart, and easy to use, but also portable and seamlessly integrates with existing infrastructure—making it an ideal solution for many of rural India’s healthcare challenges.
+
+This repository is for Bharat-TeleMed OS, which includes two different dashboards—one for patients and one for doctors—to address their specific needs.
 
 
                     
