@@ -14,7 +14,9 @@ const MainMenu = () => {
 
   return (
     <div className="w-screen h-screen flex flex-col items-center justify-center bg-gradient-to-br from-blue-100 to-green-100 relative">
+      {/* Title */}
       <h1 className="text-5xl font-extrabold text-blue-800 mb-10 tracking-wide shadow-md">Bharat-Telemed Kiosk</h1>
+       {/* Render menu buttons dynamically */}
       <div className="grid grid-cols-2 gap-8">
         {menuItems.map((item) => (
           <button
@@ -27,6 +29,7 @@ const MainMenu = () => {
           </button>
         ))}
       </div>
+      {/* Home button to navigate back */}
       <button
         onClick={() => navigate("/")}
         className="absolute bottom-6 left-6 bg-gray-800 text-white px-6 py-3 rounded-xl shadow-lg hover:bg-gray-900 transition-all duration-300 text-lg flex items-center gap-2"
