@@ -13,6 +13,7 @@ import {
 } from "react-icons/fa";
 import JivanAISymptomForm from "../components/JivanAI";
 
+
 const DoctorTeleConsultationPage = () => {
   // State for expanding/collapsing the doctor's panel and for showing tool components
   const [isExpanded, setIsExpanded] = useState(false);
