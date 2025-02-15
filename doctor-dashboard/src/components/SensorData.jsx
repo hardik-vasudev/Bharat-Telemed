@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { FaArrowLeft, FaTemperatureHigh, FaHeartbeat, FaStethoscope } from "react-icons/fa";
 import { GiSugarCane } from "react-icons/gi";
 
+
 // Define sensor types for a clean, modular markup.
 const SENSOR_TYPES = [
   { id: "temperature", icon: <FaTemperatureHigh size={30} className="text-red-500" />, label: "Temperature" },
