@@ -2,6 +2,7 @@ import { useState } from "react";
 import { jsPDF } from "jspdf";
 import medicinesData from "../data/medicines";
 
+
 const PrescriptionBuilder = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedMedicines, setSelectedMedicines] = useState([]);
