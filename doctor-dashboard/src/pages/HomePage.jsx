@@ -9,6 +9,7 @@ import {
   FaChartBar
 } from "react-icons/fa";
 
+
 const HomePage = () => {
   // Dummy doctor details (replace with dynamic data as needed)
   const doctor = {
