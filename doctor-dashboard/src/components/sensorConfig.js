@@ -1,4 +1,4 @@
-// sensorConfig.js
+
 import { FaTemperatureHigh, FaHeartbeat, FaStethoscope } from "react-icons/fa";
 import { GiSugarCane } from "react-icons/gi";
 
