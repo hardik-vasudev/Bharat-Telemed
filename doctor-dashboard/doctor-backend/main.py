@@ -5,6 +5,7 @@ from pydantic import BaseModel
 from dotenv import load_dotenv
 import os
 
+
 # Load environment variables
 load_dotenv()
 MONGO_URI = os.getenv("MONGO_URI")
