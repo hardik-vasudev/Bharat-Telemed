@@ -2,9 +2,7 @@ import React, { useRef, useState } from "react";
 import { JaaSMeeting } from "@jitsi/react-sdk";
 import { MessageSquare, MessageSquareOff } from "lucide-react";
 
-import { useRef, useState } from "react";
-import { JaaSMeeting } from "@jitsi/react-sdk";
-import { MessageSquare, MessageSquareOff } from "lucide-react";
+
 
 const DoctorJitsiMeet = ({ jwt, doctorName }) => {
   const jitsiApiRef = useRef(null);
